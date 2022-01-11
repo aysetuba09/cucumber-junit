@@ -1,0 +1,16 @@
+package com.cybertek.pages;
+
+import com.cybertek.utulities.Driver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class GoogleSearchPage {
+    public GoogleSearchPage(){
+        PageFactory.initElements(Driver.getDriver(), this);
+    }
+    @FindBy(name = "q")
+    public WebElement searchBox;
+    @FindBy(xpath = "//div[@class='kp-header']//a[@class='FLP8od']")
+    public WebElement searchResultCityName;
+}
